@@ -15,15 +15,14 @@
     <button id="make-green">Click me: green</button>
     <button id="make-blue">Click me : Blue</button>
     <button id="make-blue-violet">Click me: BlueViolet</button>
+    <button id="make-hot-pink">click me : hot pink</button>
+    <button id="make-coral">Click me : Coral</button>
 
     <script src="./js/events.js"></script>
     <script>
-        const makeBlueViolet = document.getElementById('make-blue-violet');
-        makeBlueViolet.addEventListener('click', getBlueViolet)
-
-        function getBlueViolet(){
-            document.body.style.backgroundColor = 'BlueViolet';
-        }
+        document.getElementById('make-coral').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'coral';
+        });
 
     </script>
 </body>

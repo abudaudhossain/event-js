@@ -15,7 +15,12 @@ makeBlue.onclick = function () {
 }
 
 const makeBlueViolet = document.getElementById('make-blue-violet');
-        makeBlueViolet.addEventListener('click', getBlueViolet)
-        function getBlueViolet(){
-            document.body.style.backgroundColor = 'BlueViolet';
-        }
+makeBlueViolet.addEventListener('click', getBlueViolet)
+function getBlueViolet() {
+    document.body.style.backgroundColor = 'BlueViolet';
+}
+
+const makeHotPink = document.getElementById('make-hot-pink');
+        makeHotPink.addEventListener('click', function() {
+            document.body.style.backgroundColor = 'HotPink';
+        })
