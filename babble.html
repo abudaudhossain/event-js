@@ -21,13 +21,14 @@
 
     <script>
         //add event li
-        document.getElementById('second-item').addEventListener('click', function(event){
+        /* document.getElementById('second-item').addEventListener('click', function(event){
             console.log('clicked second item');
             event.stopPropagation();
-        });
+        }); */
         //add event ul
-        document.getElementById('list-container').addEventListener('click', function(){
-            console.log('clicked ul');
+        document.getElementById('list-container').addEventListener('click', function(event){
+            console.log('clicked ',event.target.innerText);
+            event.stopPropagation();
         });
         // add event main 
         document.getElementById('main').addEventListener('click', function(){
