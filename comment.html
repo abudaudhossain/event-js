@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add comment</title>
+</head>
+<body>
+    <h1>My awesome comment area </h1>
+    <main>
+        <h2>my website comments</h2>
+        <div id="comment-container">
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, quos itaque temporibus, aut, excepturi blanditiis dolor ducimus hic id corporis soluta nostrum ad? Perferendis dolores totam officia porro harum. Adipisci?</p>
+          <p>Nam voluptatibus inventore dignissimos, libero tempora dolor vero similique accusamus quaerat excepturi asperiores eius dolore cumque quia pariatur! Maxime, fuga porro fugit mollitia obcaecati culpa consequuntur minima dolores ea maiores.</p>
+          <p>Reprehenderit nostrum, tempora corrupti dolore voluptatibus facere nobis illum, incidunt harum, fugit in nulla expedita quas facilis nisi impedit unde fuga! Enim dolores iusto sed ab commodi. Fuga, iure eveniet!</p>
+        </div>
+        <div class="add-comment-area">
+            <h4>add your comments</h4>
+            <textarea  id="comment-box" cols="50" rows="5"></textarea><br><br>
+            <button id="submit-comment">Submit comment</button>
+            
+        </div>
+        
+    </main>
+
+    <script>
+        // 1.add event listener 
+        document.getElementById('submit-comment').addEventListener('click', function(){
+            // 2. contant comment 
+            const newCommentArea = document.getElementById('comment-box');
+            const newComment = newCommentArea.value;
+            
+            // 3.creat a comment paragrap
+            const commentBox = document.createElement('p');
+            commentBox.innerText = newComment;
+
+            // 4. add comment
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.appendChild(commentBox);
+            newCommentArea.value = '';
+
+            
+        });
+    </script>
+    
+</body>
+</html>
