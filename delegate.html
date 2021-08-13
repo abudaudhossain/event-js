@@ -23,10 +23,10 @@
         const items = document.getElementsByClassName('item');
 
         for (let item of items) {
-            item.addEventListener('click', function () {
-                // console.log(item);
-                const listContainer = document.getElementById('list-container');
-                listContainer.removeChild(item);
+            item.addEventListener('click', function (event) {
+                console.log(event.target.parentNode.removeChild(event.target));
+                // const listContainer = document.getElementById('list-container');
+                // listContainer.removeChild(item);
             });
         };
     </script>

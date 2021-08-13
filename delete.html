@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deltion by github</title>            
+</head>
+<body>
+    <h1>Remove this item...</h1>
+    <h3 id="delete-item">This is secret information for me</h3>
+    
+    <input type="text" id="conformetion-text" placeholder="please enter delete">
+    <button id="delete-btn" onclick="getDelte()" disabled>Delete</button>
+
+    <script>
+        function getDelte(){
+            const h3 = document.getElementById('delete-item');
+            h3.style.display = 'none'; 
+            // console.log(h3);
+        }
+
+        const conformetionText= document.getElementById('conformetion-text');
+        //use focus event
+        conformetionText.addEventListener('focus', function(){
+            document.body.style.background = 'red';
+        });
+        //use blur event
+        conformetionText.addEventListener('blur', function(){
+            document.body.style.background = 'white';
+        });
+        //use keyup
+        conformetionText.addEventListener('keyup', function(){
+            const deleteBtn = document.getElementById('delete-btn');
+            if(conformetionText.value == 'delete'){
+               
+                deleteBtn.removeAttribute('disabled');
+            }else{
+                deleteBtn.setAttribute('disabled','');
+            }
+        });
+        // use keypress
+        conformetionText.addEventListener('keypress', function(event){
+            console.log('keypress: ', event.target.value);
+        })
+
+        // use change 
+        conformetionText.addEventListener('change', function(){
+            document.body.style.background = 'green';
+        })
+
+
+    </script>
+</body>
+</html>
