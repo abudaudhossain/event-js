@@ -23,4 +23,4 @@ function getBlueViolet() {
 const makeHotPink = document.getElementById('make-hot-pink');
         makeHotPink.addEventListener('click', function() {
             document.body.style.backgroundColor = 'HotPink';
-        })
+        });
