@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble is not babul</title>
+</head>
+<body>
+    <h1>this is bubble it is not babul</h1>
+    <main id="main">
+        <ul id="list-container" class="">
+            <li class="item">item-1</li>
+            <li id="second-item" class="item">item-2</li>
+            <li class="item">item-3</li>
+            <li class="item">item-4</li>
+            <li class="item">item-5</li>
+            <li class="item">item-6</li>
+        </ul>
+    </main>
+
+    <script>
+        //add event li
+        document.getElementById('second-item').addEventListener('click', function(event){
+            console.log('clicked second item');
+            event.stopPropagation();
+        });
+        //add event ul
+        document.getElementById('list-container').addEventListener('click', function(){
+            console.log('clicked ul');
+        });
+        // add event main 
+        document.getElementById('main').addEventListener('click', function(){
+            console.log('clicked main');
+        });
+    </script>
+</body>
+</html>
